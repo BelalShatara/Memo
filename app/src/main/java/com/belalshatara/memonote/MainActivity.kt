@@ -60,9 +60,9 @@ class MainActivity : ComponentActivity() {
                     ), onItemClick = {
                         println(it.id)
                     })
-                }
+                },
             ) {
-
+                Text(text = "aaaaa")
             }
         }
     }
