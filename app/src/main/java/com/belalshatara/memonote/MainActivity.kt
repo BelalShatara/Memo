@@ -5,6 +5,8 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.DateRange
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
@@ -48,6 +50,16 @@ class MainActivity : ComponentActivity() {
                 },
                 drawerContent = {
                     DrawHeader()
+                    DrawerBody(items = listOf(
+                        DrawerMenu(
+                            "dashboard",
+                            "Dashboard",
+                            "dashboard",
+                            Icons.Default.DateRange
+                        )
+                    ), onItemClick = {
+                        println(it.id)
+                    })
                 }
             ) {
 
